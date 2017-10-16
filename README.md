@@ -1,1 +1,1 @@
-Website for a WinForms app I created using PHP, HTML and CSS.
+Website (using PHP, HTML and CSS) for a WinForms app I created.
