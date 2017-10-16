@@ -1,0 +1,49 @@
+/*h1{
+    background-color: blue;
+}*/
+body{
+    background-color:lightcoral;
+}
+P
+{
+font-size: 1.5em;
+}
+.footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: yellowgreen;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+}
+
+li:hover{
+    background-color: red;
+}
+
+a:link {
+    color: blueviolet;
+}
+
+a:visited {
+    color: green;
+}
+
+/*html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}*/
