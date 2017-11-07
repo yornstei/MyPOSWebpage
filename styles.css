@@ -4,10 +4,22 @@
 body{
     background-color:lightcoral;
 }
-P
-{
+
+P{
 font-size: 1.5em;
 }
+/*.main{
+    margin-bottom: 15em;
+}*/
+
+.mainHeader{
+    text-align: center;
+}
+
+.button{
+    text-align: center;
+}
+
 .footer{
     position: absolute;
     left: 0;
