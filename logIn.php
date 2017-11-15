@@ -1,4 +1,5 @@
 <?php 
+session_start();
 if(array_key_exists ('userName', $_POST) && array_key_exists ('password', $_POST))
 {
     $user = $_POST['userName'];
@@ -6,7 +7,7 @@ if(array_key_exists ('userName', $_POST) && array_key_exists ('password', $_POST
 }
 
 
-$mysqli = new mysqli('127.0.0.1', 'root', '', 'mypossystem');
+$mysqli = new mysqli('127.0.0.1', 'root', '', 'new_schema');
 
 if ($mysqli->connect_errno) {
     echo "Sorry, this website is experiencing problems.";
@@ -18,7 +19,7 @@ if ($mysqli->connect_errno) {
     exit;
 }
 
-$sql = "SELECT * FROM authorizedusers WHERE user_name = '$user'";
+$sql = "select * from authorizedusers left join customers on customers.customer_id = authorizedusers.au_id WHERE user_name = '$user'";
 if (!$result = $mysqli->query($sql)) {
     
     echo "Sorry, the website is experiencing problems.";
@@ -39,6 +40,9 @@ $userRec = $result->fetch_assoc();
 //echo "we found " . $actor['first_name'] . " " . $actor['last_name'] . " on TV.";
 if ($userRec['password'] == $pass)
 {
+    $_SESSION['au_id'] = $userRec['au_id'];
+    $_SESSION['balance'] = $userRec['balance'];
+    
     setcookie('LoggedIn', 'TRUE');
     setcookie('userName', $_POST['userName']);
     

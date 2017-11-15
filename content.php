@@ -3,14 +3,14 @@ session_start();
 include "header.php"; 
 
 if($_COOKIE['LoggedIn'] == 'TRUE')
-    echo 'Hello ' . $_COOKIE['userName'];
+    echo 'Hello ' . $_COOKIE['userName']. '. Your Current Balance Is $'. $_SESSION['balance'];
 ?>
 <br>
 <br>
 WELCOME TO THE CONTENT PAGE! <br> Select the check box by the item you'd like and select the quantity<br>
 <br>
 <?php
-$mysqli = new mysqli('127.0.0.1', 'root', '', 'mypossystem');
+$mysqli = new mysqli('127.0.0.1', 'root', '', 'new_schema');
 
 if ($mysqli->connect_errno) {
     echo "Sorry, this website is experiencing problems.";

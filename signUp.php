@@ -7,10 +7,11 @@
         All * feilds are requiered. 
     </p>
 <form action="createAccount.php" method="post">
-Name: <input type="text" name="customerName" value="" />*<br>
+Full Name: <input type="text" name="customerName" value="" />*<br>
+User Name: <input type="text" name="customerUserName" value="" />*<br>
 Email: <input type="text" name="emailAddress" value="" />*<br>
-Address: <input type="text" name="address" value="" /><br>
-City: <input type="text" name="city" value="" /><br>
+Address: <input type="text" name="address" value="" />*<br>
+City: <input type="text" name="city" value="" />*<br>
 State: <select name="states">
         <option value=""></option>
 	<option value="AL">Alabama (AL)</option>
@@ -64,8 +65,8 @@ State: <select name="states">
 	<option value="WV">West Virginia</option>
 	<option value="WI">Wisconsin</option>
 	<option value="WY">Wyoming</option>
-</select><br>	
-Zip: <input type="text" name="zip" value="" /><br>
+</select>*<br>	
+Zip: <input type="text" name="zip" value="" />*<br>
 Gender: <input type="RADIO" name="gender" value="male" > Male
 <input type="RADIO" name="gender" value="female"> Female
 <input type="RADIO" name="gender" value="notSure"checked> Not-Sure<br>

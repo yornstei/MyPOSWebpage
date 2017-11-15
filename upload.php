@@ -31,7 +31,7 @@ if ($uploadOk == 0) {
     }
 }
 
-$mysqli = new mysqli('127.0.0.1', 'root', '', 'mypossystem');
+$mysqli = new mysqli('127.0.0.1', 'root', '', 'new_schema');
 
 if ($mysqli->connect_errno) {
     echo "Sorry, this website is experiencing problems.";
@@ -46,14 +46,15 @@ $image = addslashes(file_get_contents($target_file));
         
         
 $imgUpSuccess = false;
-$sql = "INSERT INTO `inventory`(`price`, `quantity`, `prod_desc`, `prod_img`) VALUES (2.2, 3, 'test', '$image')";
+$sql = "INSERT INTO `inventory`(`price`, `quantity`, `prod_desc`, `prod_img`, `prod_name`) VALUES (".$_POST['prodPrice'].", ".$_POST['prodQuantity'].", '".$_POST['prodDesc']."', '$image','".$_POST['prodName']."')";
+$mysqli->query($sql);
 
-if (!$result = $mysqli->query($sql)) {
+if ($mysqli->affected_rows <= 0) {
     
     echo "Sorry, the website is experiencing problems.";
 
     echo "Error: Our query failed to execute and here is why: \n";
-    echo "Query: " . $sql . "\n";
+//    echo "Query: " . $sql . "\n";
     echo "Errno: " . $mysqli->errno . "\n";
     echo "Error: " . $mysqli->error . "\n";
     exit;
@@ -67,6 +68,5 @@ else
 
 
 
-$result->free();
 $mysqli->close();
 ?>
