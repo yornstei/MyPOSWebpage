@@ -1,7 +1,9 @@
 <HTML>
 <HEAD>
+    <SCRIPT type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+        <SCRIPT type="text/javascript" src="js/menu.js"></script>
+
 <LINK rel="stylesheet" href="styles.css" type="text/css" />
-<!--<p><img src="http://www.foodserve.com/images/pos-icon.gif" alt="POS system" style="float:left;width:150px;height:128px;">The Best POS System</P>-->
 </HEAD>
 <h1>
     <?php 
@@ -10,7 +12,8 @@ echo '<img src="'.$logoImageName.'" alt="POS system"style=";width:100%;height:12
 ?>
 </h1>
 <HR />
-<BODY>
     <?php include "menu.php"; ?>
+<br><br><br><br>
+<BODY>
 <HR />
 
