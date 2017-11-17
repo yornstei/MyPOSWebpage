@@ -49,6 +49,8 @@ a:visited {
     color: green;
 }
 
+/*Menu - jquery*/
+
 #navMenu {
 	margin:0; 
 	padding:0;
@@ -62,7 +64,7 @@ a:visited {
 		float:left;	
 		
 		/* default background image	*/
-		background:url(default.jpg) no-repeat center center;	
+		background:url('images/default.jpg') no-repeat center center;	
 		
 		/* width and height of the menu item */
 		width:120px;							
@@ -91,7 +93,7 @@ a:visited {
 
  	#navMenu li .hover {
  		/* mouseover image	*/
-		background:url(over.jpg) no-repeat center center;		
+		background:url('images/over.jpg') no-repeat center center;		
 
 		/* must be postion absolute 	*/
 		position:absolute;	
@@ -111,7 +113,7 @@ a:visited {
 
 	#navMenu li.selected {
 		/* selected image	*/
-		background:url(selected.jpg) no-repeat center center;	
+		background:url('images/selected.jpg') no-repeat center center;	
 	}
         
 /*html {
@@ -124,3 +126,27 @@ a:visited {
 *:after {
   box-sizing: inherit;
 }*/
+
+/*item viewer - jquery*/
+
+#slideshow {
+    position:relative;
+    height:350px;
+}
+
+#slideshow IMG {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}

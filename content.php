@@ -10,7 +10,7 @@ if($_COOKIE['LoggedIn'] == 'TRUE')
 WELCOME TO THE CONTENT PAGE! <br> Select the check box by the item you'd like and select the quantity<br>
 <br>
 <?php
-$mysqli = new mysqli('127.0.0.1', 'root', '', 'new_schema');
+$mysqli = new mysqli('127.0.0.1', 'root', '', 'mypossystem');
 
 if ($mysqli->connect_errno) {
     echo "Sorry, this website is experiencing problems.";
